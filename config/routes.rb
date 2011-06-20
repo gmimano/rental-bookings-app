@@ -1,4 +1,11 @@
 RentalBookinsApp::Application.routes.draw do
+
+  resources :properties do
+    resources :bookings
+  end
+
+  root :to => "dashboard#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,6 @@
+<div class="sidebar">
+	<% if @sidebar %>
+	<h1><%= @sidebar.titleize %></h1>
+	<%= render "layouts/sidebars/" + @sidebar %>
+	<% end %>
+</div>

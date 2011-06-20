@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RentalBookinsApp</title>
-  <%= stylesheet_link_tag :all %>
+  <title>Really Simple Rental Bookings</title>
   <%= javascript_include_tag :defaults %>
+  <%= render 'layouts/stylesheets' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div class="container">
+		<%= render 'layouts/header' %>
+		<section class="span-24">
+			<% flash.each do |key, value| %>
+			  <%= content_tag(:div, value, :class => "flash #{key}") %>
+			<% end %>
+			<%= render 'layouts/navigation' %>
+		</section>
+		<section class="span-16 border">
+			<hr />
+			<%= yield %>
+		</section>
+		<section class="span-8 last">
+			<%= render 'layouts/sidebar' %>
+		</section>
+		<%= render 'layouts/footer' %>
+		<% if Rails.env.development? %>
+		<section class="span-24">
+			<%= debug(params) %>
+		</section>
+		<% end %>
+	</div>
 </body>
 </html>

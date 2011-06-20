@@ -1,0 +1,6 @@
+<% if @bookings.empty? %>
+<div class="welcome_message">
+	<div>Getting Started</div>
+	<div>Create your first booking <%= link_to "Add Booking", new_property_booking_path(@property) %></div>
+</div>
+<% end %>

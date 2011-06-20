@@ -1,0 +1,12 @@
+<h1>Create New Property</h1>
+<hr />
+<%= form_for(@property) do |f| %>
+	<div class="field">
+		<%= f.label :name %><br />
+		<%= f.text_field :name %>
+	</div>
+	<hr />
+	<div class="actions">
+		<%= f.submit "Create this property" %> or <%= link_to "Cancel", root_path %>
+	</div>
+<% end %>

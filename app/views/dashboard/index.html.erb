@@ -1,0 +1,6 @@
+<% if @properties.empty? %>
+<div class="welcome_message">
+	<div>Welcome to your Really Simple Rental Bookings application.</div>
+	<div>Create your first property <%= link_to "Add Property", new_property_path %></div>
+</div>
+<% end %>

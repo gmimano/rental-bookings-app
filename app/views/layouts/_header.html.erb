@@ -1,0 +1,13 @@
+<header class="span-24">
+	<% if @breadcrumb %>
+	<div id="breadcrumb">
+	    <%= link_to @breadcrumb[:name], @breadcrumb[:path] %>
+	</div>
+	<% end %>
+	<nav>
+		<ul>
+			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "Sign in", '#' %></li>
+		</ul>
+	</nav>
+</header>
