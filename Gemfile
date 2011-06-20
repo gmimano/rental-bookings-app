@@ -28,6 +28,7 @@ gem "mysql2", "~> 0.2.7"
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development do
+  gem 'heroku'
   gem 'rspec-rails'
 end
 
